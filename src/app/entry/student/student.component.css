@@ -1,0 +1,276 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+.sidenav {
+    height: 100%;
+    width: 50px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    padding-top: 20px;
+    margin-top: 0px;
+    padding: 0px;
+    /* margin-top: 50px; */
+    margin: 0px;
+  }
+
+
+.topnav {
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    overflow-y: hidden;
+    padding-top: 20px;
+    background-color: whitesmoke;
+    /* margin: 0px 0px 0px 50px; */
+    padding: 0px;
+    
+  }
+
+/* .main{
+    padding: 50%;
+    width: 100%;
+    border: 1px solid tomato;
+    text-align: center;
+} */
+
+.grid-three{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 10px;
+    
+}
+
+.grid-two{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+
+.grid-one{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+
+.flex{
+    display: flex;
+    
+}
+
+.card{
+    background-color: white;
+    box-shadow: 2px 2px 20px 0.1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    width: 100%;
+    /* margin-left: 30px; */
+}
+
+/* .card-main{
+    padding: 10px;
+    width: 100%;
+} */
+
+table.scrolldown tbody {
+              
+    /* Set the height of table body */
+    height: 50px; 
+      
+    /* Set vertical scroll */
+    overflow-y: auto;
+      
+    /* Hide the horizontal scroll */
+    overflow-x: hidden; 
+}
+
+.small-w{
+    width: 40%;
+    
+}
+
+.medium-w{
+    width: 600px;
+}
+
+.large-w{
+    width: 800px;
+}
+
+.extra-large-w{
+    width: 1430px;
+}
+
+.small-h{
+    height: 250px;    
+    
+}
+
+.container{
+    width: 100%;
+    padding: 0px;
+    /* margin: 0px; */
+    /* border: 1px solid tomato; */
+}
+
+.medium-h{
+    height: 450px;    
+}
+
+.large-h{
+    height: 650px;    
+}
+
+.icon-size{
+    font-size: 20px;
+    text-align: center;
+    color: whitesmoke;
+    margin-bottom: 35px;
+}
+
+.icon-size:hover{
+    color: tomato;
+    cursor: pointer;
+}
+
+.slider{
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.profile{
+    width: 30px;
+    height: 30px;
+    background-color: whitesmoke;
+    border-radius: 50px;
+    text-align: center;
+    margin: 5px ;
+}
+
+.center-icon{
+    margin: 5px
+}
+
+.nav-icon{
+    margin: 10px;
+}
+
+.search-main{
+    margin: 3px;
+
+}
+
+.search{
+    outline: none;
+    border:1px solid whitesmoke;
+    padding: 5px;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 15px;
+}
+
+.search-icon{
+    color: whitesmoke;
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
+
+  .firstNavItem{
+      margin-left: 50px;
+  }
+
+  .profileName{
+      color: whitesmoke;
+      margin:10px;
+  }
+
+.grades{
+    padding: 5px;
+}
+  
+
+.table-fixed thead,
+.table-fixed thead>th {
+    background: tomato;
+    color: #fff;
+}
+
+.table-fixed tbody tr td {
+    background: #fff;
+}
+
+.table-fixed>thead>tr>th {
+    border: 0 !important;
+}
+
+.table-fixed>tbody>tr>td:last-child {
+    border-right: 0;
+}
+
+.table-fixed tbody td,
+.table-fixed thead>tr>th {
+    float: left;
+    font-size: 14px;
+    padding-left: 0px !important;
+}
+
+.table-fixed .col {
+    width: 25%;
+}
+
+.table-fixed tbody {
+    display: block;
+    height: 350px;
+    overflow-y: auto;
+}
+
+.table-fixed tr {
+    display: block;
+}
+
+.scholarship{
+    /* background-image: url("/congratulations.png"); */
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding-top: 120px;
+    text-align: center;
+    color: tomato;
+    width: inherit;
+    height: inherit;
+}
