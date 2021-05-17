@@ -1,0 +1,177 @@
+body{
+    background-color:orange;
+    
+}
+
+.flex{
+    display: flex;
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    height: 80vh;
+}
+
+.circle{
+    /* display: inline-block; */
+    width: 700px;
+    height: 700px;
+    background-color: rgb(255, 186, 58);
+    border-radius: 50%;
+    box-shadow: 2px 2px 20px 0.1px rgba(0, 0, 0, 0.05);
+}
+
+.form{
+    /* display: inline-block; */
+    position: absolute;
+    width: 600px;
+    height: 630px;
+    left: 40px;
+    top: 40px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 20px 0.1px rgb(255, 234, 195);
+}
+
+.inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    /* display: block; */
+}
+
+input[type="radio"]{
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 150px;
+    width:10px
+}
+
+input{
+    font-size: 15px;
+    padding: 15px;
+    outline: none;
+    border: 1px solid rgb(214, 240, 245);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-left: 150px;
+    margin-top: 5px;
+    width: 270px;
+}
+
+input:focus{
+    border: 1px solid orange;
+}
+
+
+input::placeholder {
+    color: red;
+}
+
+
+.main-text{
+    margin-left: 150px;
+}
+
+label{
+    font-family: poppins;
+    color: orange;
+}
+
+h2{
+    margin-left: 250px;
+    color: orange;
+    
+}
+
+button{
+    border: none;
+    background-color: orange;
+    color: white;
+    padding: 20px 20px;
+    width: 300px;
+    border-radius: 5px;
+    margin-left: 150px;
+
+}
+
+button:hover{
+    cursor: pointer;
+    background: rgb(206, 134, 0);
+}
+
+p{
+    color: orange;
+    margin-left: 250px;
+}
+
+.socials{
+    display: flex;
+    margin-left: 235px;
+    margin-top: 5px;
+    font-size: 30px;
+}
+
+.facebook{
+    margin-right: 10px;
+    color: teal;
+}
+
+.facebook:hover{
+    cursor: pointer;
+    color: royalblue;
+}
+
+.twitter{
+    margin-right: 10px;
+    color: teal;
+}
+
+.twitter:hover{
+    cursor: pointer;
+    color: #1DA1F2;
+}
+.google{
+    margin-right: 10px;
+    color: teal;
+}
+
+.google:hover{
+    cursor: pointer;
+    color: red;
+}
+.apple{
+    margin-right: 10px;
+    color: teal;
+}
+
+.apple:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.hidden{
+    display: none;
+}
+
+.opaque{
+    opacity: 0;
+}
+
+h3{
+    text-align: center;
+    position: relative;
+    top: 40%;
+    color: teal;
+    font-size: 50px;
+}
+
+h5{
+    padding: 0px;
+    margin: 0px;
+    color: red;
+    text-align: center;
+}
