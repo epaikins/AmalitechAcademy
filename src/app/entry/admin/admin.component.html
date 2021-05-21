@@ -46,13 +46,13 @@
     </ul>
   </div>
 
-  <div class="sidenav" title="Home">
+  <div class="sidenav">
 
     <div class="icon-size slider">
       <i class="fas fa-bars"></i>
     </div>
 
-    <div class="icon-size">
+    <div class="icon-size" title="Home">
       <a class="icon-size" [routerLink] = "['/admin']"><i class="fas fa-home"></i></a>
     </div>
 
@@ -63,7 +63,17 @@
 
     <div class="icon-size" title="Users">
       <!-- <i class="fa fa-user fa-5x"></i> -->
-      <i class="fas fa-users"></i>
+      <a class="icon-size" [routerLink] = "['/admin/usersoverview']"><i class="fas fa-user-friends"></i></a>
+    </div>
+
+    <div class="icon-size" title="Usergroups">
+      <!-- <i class="fa fa-user fa-5x"></i> -->
+      <a class="icon-size" [routerLink] = "['/admin/usergroups']"><i class="fas fa-users"></i></a>
+    </div>
+
+    <div class="icon-size" title="Departments">
+      <!-- <i class="fa fa-user fa-5x"></i> -->
+      <a class="icon-size" [routerLink] = "['/admin/departments']"><i class="fas fa-building"></i></a>
     </div>
 
     <div class="icon-size" title="Assignments">
@@ -80,120 +90,11 @@
 
   </div>
 
-  <!-- <div class="container"> -->
   <div class="main">
-    <h2>Analytics Overview</h2>
-
-    <!-- <div class="flex"> -->
-    <div class="container row col-lg-12 col-md-12 col-sm-12">
-      <div class="card small-h col-lg-3 col-md-3 col-sm-12">
-        <h6>Mini-Content</h6>
-      </div>
-
-      <div class="card-main col-lg-3 col-md-3 col-sm-12">
-        <div class="card small-h ">
-          <h6>Mini-Content</h6>
-        </div>
-      </div>
-      <div class="card scholarship small-h col-lg-6 col-md-6 col-sm-12">
-        <h3>Congratulations</h3>
-        <p>You won the scholarship for month April!</p>
-      </div>
-    </div>
-    <!-- </div> -->
-
-    <div class="container row col-lg-12 col-md-12 col-sm-12">
-      <div class="card medium-h grades col-lg-7 col-md-6 col-sm-12">
-        <div>
-          <h5>Grades Overview</h5>
-        </div>
-        <div class="container">
-          <div class="row">
-            <table class="table-bordered table-striped table-condensed table-fixed">
-              <thead>
-                <tr>
-                  <th class="col">Course Name</th>
-                  <th class="col">Completed Quizzes</th>
-                  <th class="col">Completed Assignments</th>
-                  <th class="col">Grade</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="col">Java Development</td>
-                  <td class="col">3/9</td>
-                  <td class="col">2/5</td>
-                  <td class="col">78%</td>
-                </tr>
-                <tr>
-                  <td class="col">Java Development</td>
-                  <td class="col">3/9</td>
-                  <td class="col">2/5</td>
-                  <td class="col">78%</td>
-                </tr>
-                <tr>
-                  <td class="col">Java Development</td>
-                  <td class="col">3/9</td>
-                  <td class="col">2/5</td>
-                  <td class="col">78%</td>
-                </tr>
-                <tr>
-                  <td class="col">Java Development</td>
-                  <td class="col">3/9</td>
-                  <td class="col">2/5</td>
-                  <td class="col">78%</td>
-                </tr>
-                <tr>
-                  <td class="col">Java Development</td>
-                  <td class="col">3/9</td>
-                  <td class="col">2/5</td>
-                  <td class="col">78%</td>
-                </tr>
-                <tr>
-                  <td class="col">Java Development</td>
-                  <td class="col">3/9</td>
-                  <td class="col">2/5</td>
-                  <td class="col">78%</td>
-                </tr>
-                <tr>
-                  <td class="col">Java Development</td>
-                  <td class="col">3/9</td>
-                  <td class="col">2/5</td>
-                  <td class="col">78%</td>
-                </tr>
-                <tr>
-                  <td class="col">Java Development</td>
-                  <td class="col">3/9</td>
-                  <td class="col">2/5</td>
-                  <td class="col">78%</td>
-                </tr>
-                <tr>
-                  <td class="col">Java Development</td>
-                  <td class="col">3/9</td>
-                  <td class="col">2/5</td>
-                  <td class="col">78%</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div class="card  medium-h col-lg-5 col-md-6 col-sm-12">
-        <h6>Medium-Content</h6>
-      </div>
-
-    </div>
-
-    <div class="card medium-h container row col-lg-12 col-md-12 col-sm-12">
-      <h6>Large-Content</h6>
-    </div>
-
-
-
-
+    <router-outlet></router-outlet>
   </div>
-  <!-- </div> -->
+
+
 </body>
 
 </html>

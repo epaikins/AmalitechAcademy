@@ -1,0 +1,67 @@
+.flex{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+input[type="text"]{
+    font-size: 20px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-bottom: 4px solid grey;
+}
+
+input[type="text"]:focus{
+    border-bottom: 4px solid tomato;
+}
+
+button{
+    color: whitesmoke;
+    font-family: poppins;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.add-btn{
+    background-color: tomato;
+}
+
+.add-btn:hover{
+    cursor: pointer;
+    background-color: rgb(202, 78, 56);
+}
+
+.inactive-btn{
+    color: whitesmoke;
+    font-family: poppins;
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: grey;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .inactive-btn:hover{
+    cursor: not-allowed;
+    background-color: grey;
+  }
+
+  .delete-btn{
+    background-color: red;
+  }
+
+  .delete-btn:hover{
+    background-color: rgb(255, 111, 111);
+  }
+
+  .edit-btn{
+    background-color: green;
+  }
+
+  .edit-btn:hover{
+    background-color: rgb(81, 131, 81);
+  }

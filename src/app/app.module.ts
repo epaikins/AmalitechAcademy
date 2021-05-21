@@ -9,7 +9,11 @@ import { StudentComponent } from './entry/student/student.component';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+import { UsersapiService } from "./shared/services/usersapi.service";
 
 @NgModule({
   declarations: [
@@ -24,9 +28,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NgbModule,
     CommonModule,
     FontAwesomeModule,
-    UsersModule
+    UsersModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UsersapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

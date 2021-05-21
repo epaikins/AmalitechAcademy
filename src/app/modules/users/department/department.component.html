@@ -1,1 +1,31 @@
-<p>department works!</p>
+<div>
+  <h2>Add Department</h2>
+
+  <div class="flex">
+    <form [formGroup]="departmentForm" (ngSubmit)="onAdd()">
+      <input id="name" type="text" placeholder="Enter Department Name" formControlName="name" required>
+      <button *ngIf="departmentForm.get('name').invalid; else elseBlock" class="inactive-btn" type="submit" disabled><i class="fa fa-plus"></i></button>
+      <ng-template #elseBlock>
+        <button type="submit" class="add-btn"><i class="fa fa-plus"></i></button>
+      </ng-template>
+    </form>
+  </div>
+</div>
+
+<div class="card medium-h container row col-lg-12 col-md-12 col-sm-12">
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let department of lstsDepartments">
+    <th>{{ department.id }}</th>
+    <th>{{ department.name }}</th>
+    <th>
+      <span><button type="submit" class="edit-btn"><i class="fas fa-edit"></i></button></span>
+      <span><button type="submit" class="delete-btn"><i class="fas fa-trash-alt"></i></button></span>
+    </th>
+  </tr>
+</table>
+</div>
