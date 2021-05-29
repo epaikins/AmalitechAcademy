@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { UsersapiService } from "./shared/services/usersapi.service";
+
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { UsersapiService } from "./shared/services/usersapi.service";
     HttpClientModule
   ],
   providers: [UsersapiService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[ CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
   }

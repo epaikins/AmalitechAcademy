@@ -17,5 +17,13 @@ export class UsersapiService {
   postDepartment(department:Department):Observable<any>{
     return this.httpclient.post("http://localhost:8083/api/department",department)
   }
+
+  updateDepartment(id,department:Department):Observable<any>{
+    return this.httpclient.put("http://localhost:8083/api/department/"+id,department)
+  }
+
+  deleteDepartment(departmentId):Observable<any>{
+    return this.httpclient.delete("http://localhost:8083/api/department/"+departmentId);
+  }
   
 }
