@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { UsersapiService } from "./shared/services/usersapi.service";
+import { UserRoutingModule } from './modules/users/user-routing.module';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { UsersapiService } from "./shared/services/usersapi.service";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    UserRoutingModule,
     NgbModule,
     CommonModule,
     FontAwesomeModule,

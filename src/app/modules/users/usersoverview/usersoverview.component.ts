@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-usersoverview',
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersoverviewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
+
+  btnClick() {
+    this.router.navigateByUrl('/departments');
+};
 
 }

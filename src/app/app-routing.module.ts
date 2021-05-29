@@ -10,7 +10,9 @@ import { UsergroupComponent } from '../app/modules/users/usergroup/usergroup.com
 
 const routes:Routes = [
   {path: "admin", component:AdminComponent, children:[
-    {path:'usersoverview', component: UsersoverviewComponent},
+    {path:'usersoverview', component: UsersoverviewComponent, children:[
+      {path:'departments', component: DepartmentComponent},
+    ]},
     {path:'departments', component: DepartmentComponent},
     {path:'usergroups', component: UsergroupComponent}
   ]},

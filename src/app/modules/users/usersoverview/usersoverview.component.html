@@ -1,5 +1,3 @@
-<h2>Users Overview</h2>
-
 <!-- <div class="container row col-lg-12 col-md-12 col-sm-12">
   <div class="card small-h col-lg-3 col-md-3 col-sm-12">
     <h6>Mini-Content</h6>
@@ -106,7 +104,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm">
-      <a href="#"
+      <a [routerLink] = "['/admin/usersoverview']"
          role="button"
          class="btn btn-outline-primary btn-lg btn-block text-center">
         <span><i class="fas fa-chart-pie"></i></span>
@@ -114,7 +112,7 @@
       </a>
     </div>
     <div class="col-sm">
-      <a href="#"
+      <a [routerLink] = "['/admin/usersoverview/usergroups']"
          role="button"
          class="btn btn-outline-primary btn-lg btn-block text-center">
         <span><i class="fas fa-users"></i></span>
@@ -122,7 +120,7 @@
       </a>
     </div>
     <div class="col-sm">
-      <a href="#"
+      <a [routerLink] = "['/admin/usersoverview/departments']"
          role="button"
          class="btn btn-outline-primary btn-lg btn-block text-center">
         <span><i class="fas fa-building"></i></span>
@@ -130,7 +128,7 @@
       </a>
     </div>
     <div class="col-sm">
-      <a href="#"
+      <a [routerLink] = "['/admin/usersoverview/users']"
          role="button"
          class="btn btn-outline-primary btn-lg btn-block text-center">
         <span><i class="fas fa-user-friends"></i></span>
@@ -142,6 +140,6 @@
 
 <hr>
 
-<!-- <div>
+<div>
   <router-outlet></router-outlet>
-</div> -->
+</div>

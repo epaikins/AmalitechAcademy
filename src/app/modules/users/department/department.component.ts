@@ -36,7 +36,6 @@ export class DepartmentComponent implements OnInit {
         this.lstsDepartments = data;
       }
     )
-
     this.editForm = this.formBuilder.group({
       id: '',
       name: ''
