@@ -108,9 +108,13 @@ export class UserComponent implements OnInit {
     });
   }
 
+  showSearch(){
+    document.querySelector(".searchItems").classList.toggle('hidden');
+    console.log(document.querySelector(".row"));
+  }
+
   openAdd(targetModal) {
     this.modalService.open(targetModal, {
-      backdrop: 'static',
       size: 'lg'
     });
   }

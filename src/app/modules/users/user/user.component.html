@@ -1,9 +1,50 @@
 <div class="container">
-    <div>
-        <button (click)="openAdd(contentAdd)" class="btn btn-md btn-outline-primary">
-          <i class="fa fa-user" style="margin-right:5px;"></i> New User</button>
+  <button (click)="openAdd(contentAdd)" class="btn btn-md btn-outline-primary button-color">
+    <i class="fa fa-user icon-color" style="margin-right:5px;"></i> New User</button>
+    <button (click)="showSearch()" class="btn btn-md btn-outline-primary button-color">
+      <i class="fa fa-search icon-color" style="margin-right:5px;"></i> Search</button>
+</div>
+
+<div class="container ">
+
+  <div class="row searchItems hidden">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-header">
+        <p>SEARCH BY DEPARTMENT ID</p> 
+        </div>
+        <div class="card-body">
+          <input type="text" placeholder="Department's ID">
+          <button><i class="fa fa-search icon-color" style="margin-right:5px;"></i></button>
+        </div>
       </div>
-  
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-header">
+        <p>SEARCH BY USERGROUP ID</p> 
+        </div>
+        <div class="card-body">
+          <input type="text" placeholder="Usergroup's ID">
+          <button><i class="fa fa-search icon-color" style="margin-right:5px;"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-header">
+        <p>SEARCH BY NAME</p> 
+        </div>
+        <div class="card-body">
+          <input type="text" placeholder="Name">
+          <button><i class="fa fa-search icon-color" style="margin-right:5px;"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
     <div class="col-lg-12 col-md-12 col-sm-12">
       <table class="table-scroll small-first-col">
         <thead>

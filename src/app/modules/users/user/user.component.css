@@ -5,25 +5,44 @@
 }
 
 input[type="text"]{
-    font-size: 20px;
-    padding: 5px;
-    outline: none;
-    border: none;
-    border-bottom: 4px solid grey;
+  border-radius: 0px;
+    font-size: 15px;
+    padding: 7px;
+    border: 1px solid grey;
+    border-right: none;
 }
 
 input[type="text"]:focus{
-    border-bottom: 4px solid tomato;
+  outline: none;
+    border-right: none;
+}
+
+.searchItems button{
+    color: grey;
+    font-family: poppins;
+    font-size: 15px;
+    padding: 8px 8px 6px 10px;
+    border: 1px solid grey;
+    border-left: none;
+    background-color: white;
+}
+
+.searchItems button:hover{
+  color: cornflowerblue;
 }
 
 button{
-    color: whitesmoke;
-    font-family: poppins;
-    padding: 10px 20px;
-    font-size: 15px;
-    border: none;
-    border-radius: 10px;
-    margin: 5px;
+  color: black;
+  font-family: poppins;
+  font-size: 15px;
+  padding: 8px 8px 6px 10px;
+  border: 1px solid grey;
+}
+
+button:hover{
+  border: none;
+  color: whitesmoke;
+  background-color: cornflowerblue;
 }
 
 .add-btn{
@@ -51,7 +70,12 @@ button{
   }
 
   .delete-btn{
+    outline: none;
+    border: none;
+    border-radius: 5px;
     background-color: red;
+    color: whitesmoke;
+    margin-left: 5px;
   }
 
   .delete-btn:hover{
@@ -59,7 +83,11 @@ button{
   }
 
   .edit-btn{
+    outline: none;
+    border: none;
+    border-radius: 5px;
     background-color: green;
+    color: whitesmoke;
   }
 
   .edit-btn:hover{
@@ -131,3 +159,38 @@ button{
   }
   
   .small-col{flex-basis:10%;}
+
+
+  .button-color{
+    border: 2px solid cornflowerblue;
+    color: cornflowerblue;
+  }
+
+  .button-color:hover{
+    color: whitesmoke;
+  }
+
+  .card-header p{
+    color: cornflowerblue;
+    font-family: poppins;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+ .card{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .card-header{
+    height: 3rem;
+  }
+
+  .btn-outline-primary{
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.hidden{
+  display: none;
+}
