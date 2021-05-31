@@ -33,7 +33,6 @@ export class UsergroupComponent implements OnInit {
     
     this._usersapiService.getUsergroups().subscribe(
       data =>{
-        console.log(data)
         this.lstsUsergroups = data;
       }
     )
@@ -97,7 +96,7 @@ export class UsergroupComponent implements OnInit {
   openDelete(targetModal, usergroup: Usergroup) {
     this.deleteId = usergroup.id;
     this.modalService.open(targetModal, {
-      backdrop: 'static',
+      backdrop: 'static',  
       size: 'lg'
     });
   }

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { Department } from '../models/department.model';
 import { Usergroup } from '../models/usergroup.model';
+import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -48,4 +49,24 @@ export class UsersapiService {
     return this.httpclient.delete("http://localhost:8083/api/usergroup/"+usergroupId);
   }
   
+
+    // User API End Points
+
+    getUsers():Observable<any>{
+      return this.httpclient.get("http://localhost:8083/api/users")
+    }
+  
+    postUser(user:User):Observable<any>{
+      console.log(user);
+      return this.httpclient.post("http://localhost:8083/api/user",user)
+    }
+  
+    updateUser(id,user:User):Observable<any>{
+      return this.httpclient.put("http://localhost:8083/api/user/"+id,user)
+    }
+  
+    deleteUser(userId):Observable<any>{
+      return this.httpclient.delete("http://localhost:8083/api/user/"+userId);
+    }
+
 }
