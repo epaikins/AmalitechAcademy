@@ -80,18 +80,6 @@ body{
     width: 100%;
 } */
 
-table.scrolldown tbody {
-              
-    /* Set the height of table body */
-    height: 50px; 
-      
-    /* Set vertical scroll */
-    overflow-y: auto;
-      
-    /* Hide the horizontal scroll */
-    overflow-x: hidden; 
-}
-
 .small-w{
     width: 40%;
     
@@ -227,7 +215,7 @@ ul {
 
 .table-fixed thead,
 .table-fixed thead>th {
-    background: tomato;
+    background: cornflowerblue;
     color: #fff;
 }
 
@@ -246,7 +234,7 @@ ul {
 .table-fixed tbody td,
 .table-fixed thead>tr>th {
     float: left;
-    font-size: 14px;
+    font-size: 15px;
     padding-left: 0px !important;
 }
 
@@ -256,7 +244,8 @@ ul {
 
 .table-fixed tbody {
     display: block;
-    height: 350px;
+    height: 380px;
+    width: 100%;
     overflow-y: auto;
 }
 
@@ -270,7 +259,7 @@ ul {
     background-size:cover;
     padding-top: 120px;
     text-align: center;
-    color: tomato;
+    color: cornflowerblue;
     width: inherit;
     height: inherit;
 }

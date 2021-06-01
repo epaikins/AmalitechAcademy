@@ -16,16 +16,6 @@ input[type="text"]:focus{
     border-bottom: 4px solid tomato;
 }
 
-button{
-    color: whitesmoke;
-    font-family: poppins;
-    padding: 10px 20px;
-    font-size: 15px;
-    border: none;
-    border-radius: 10px;
-    margin: 5px;
-}
-
 .add-btn{
     background-color: tomato;
 }
@@ -49,85 +39,3 @@ button{
     cursor: not-allowed;
     background-color: grey;
   }
-
-  .delete-btn{
-    background-color: red;
-  }
-
-  .delete-btn:hover{
-    background-color: rgb(255, 111, 111);
-  }
-
-  .edit-btn{
-    background-color: green;
-  }
-
-  .edit-btn:hover{
-    background-color: rgb(81, 131, 81);
-  }
-
-
-  .container{
-    /* padding: 1rem;
-    margin: 1rem; */
-  }
-
-  table{
-    border: none;
-  }
-
-  .table-scroll{
-    display: block;
-    empty-cells: show;
-    
-    /* Decoration */
-    border-spacing: 0;
-    border: 1px solid;
-  }
-  
-  .table-scroll thead{
-    background-color: #f1f1f1;   
-    position:relative;
-    display: block;
-    width:100%;
-    /* overflow-y: scroll; */
-  }
-  
-  .table-scroll tbody{
-    /* Position */
-    display: block; position:relative;
-    width:100%; overflow-y:scroll;
-    /* Decoration */
-    border-top: 1px solid rgba(0,0,0,0.2);
-  }
-  
-  .table-scroll tr{
-    width: 100%;
-    display:flex;
-  }
-  
-  .table-scroll td,.table-scroll th{
-    flex-basis:100%;
-    flex-grow:2;
-    display: block;
-    padding: 1rem;
-    text-align:left;
-  }
-  
-  /* Other options */
-  
-  .table-scroll.small-first-col td:first-child,
-  .table-scroll.small-first-col th:first-child{
-    flex-basis:20%;
-    flex-grow:1;
-  }
-  
-  .table-scroll tbody tr:nth-child(2n){
-    background-color: rgba(130,130,170,0.1);
-  }
-  
-  .body-half-screen{
-    max-height: 50vh;
-  }
-  
-  .small-col{flex-basis:10%;}

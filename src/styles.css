@@ -1,3 +1,111 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~font-awesome/css/font-awesome.css";
+
+
+/*------------------------------------------- Table Styling Starts -------------------------------------------------------------------------------------- */
+
+table {
+  border: none;
+}
+
+.table-scroll {
+  display: block;
+  empty-cells: show;
+
+  /* Decoration */
+  border-spacing: 0;
+  border: 1px solid;
+}
+
+.table-scroll thead {
+  background-color: cornflowerblue;
+  border: 1px solid cornflowerblue;
+  color: whitesmoke;
+  position: relative;
+  display: block;
+  width: 100%;
+  /* overflow-y: scroll; */
+}
+
+.table-scroll tbody {
+  /* Position */
+  display: block;
+  position: relative;
+  width: 100%;
+  overflow-y: scroll;
+  /* Decoration */
+  border: 1px solid cornflowerblue;
+}
+
+.table-scroll tr {
+  width: 100%;
+  display: flex;
+}
+
+.table-scroll td,
+.table-scroll th {
+  flex-basis: 100%;
+  flex-grow: 2;
+  display: block;
+  padding: 1rem;
+  text-align: left;
+}
+
+/* Other options */
+
+.table-scroll.small-first-col td:first-child,
+.table-scroll.small-first-col th:first-child {
+  flex-basis: 20%;
+  flex-grow: 1;
+}
+
+.table-scroll tbody tr:nth-child(2n) {
+  background-color: rgba(130, 130, 170, 0.1);
+}
+
+.body-half-screen {
+  max-height: 50vh;
+}
+
+.small-col {
+  flex-basis: 10%;
+}
+
+/*------------------------------------------- Table Styling Ends -------------------------------------------------------------------------------------- */
+
+/* Edit, Delete Buttons  */
+
+.delete-btn {
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  margin: 5px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  color: whitesmoke;
+  margin-left: 5px;
+}
+
+
+.edit-btn {
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  margin: 5px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  color: whitesmoke;
+}
+
+.delete-btn:hover {
+  background-color: rgb(255, 111, 111);
+}
+
+.edit-btn:hover {
+  background-color: rgb(81, 131, 81);
+}
