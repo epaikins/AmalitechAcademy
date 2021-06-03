@@ -13,29 +13,7 @@ input[type="text"]{
 }
 
 input[type="text"]:focus{
-    border-bottom: 4px solid tomato;
+    border-bottom: 4px solid cornflowerblue;
 }
 
-.add-btn{
-    background-color: tomato;
-}
 
-.add-btn:hover{
-    cursor: pointer;
-    background-color: rgb(202, 78, 56);
-}
-
-.inactive-btn{
-    color: whitesmoke;
-    font-family: poppins;
-    padding: 10px 20px;
-    font-size: 15px;
-    background-color: grey;
-    border: none;
-    border-radius: 10px;
-  }
-  
-  .inactive-btn:hover{
-    cursor: not-allowed;
-    background-color: grey;
-  }

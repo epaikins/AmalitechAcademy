@@ -74,7 +74,7 @@ table {
 
 /*------------------------------------------- Table Styling Ends -------------------------------------------------------------------------------------- */
 
-/* Edit, Delete Buttons  */
+/*------------------------------------------- Add, Edit, Delete Buttons Starts ------------------------------------------------------------------------ */
 
 .delete-btn {
   padding: 10px 20px;
@@ -89,6 +89,9 @@ table {
   margin-left: 5px;
 }
 
+.delete-btn:hover {
+    background-color: rgb(255, 111, 111);
+  }
 
 .edit-btn {
   padding: 10px 20px;
@@ -102,10 +105,41 @@ table {
   color: whitesmoke;
 }
 
-.delete-btn:hover {
-  background-color: rgb(255, 111, 111);
-}
+
 
 .edit-btn:hover {
   background-color: rgb(81, 131, 81);
 }
+
+.add-btn{
+    color: whitesmoke;
+    font-family: poppins;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+}
+
+.add-btn:hover{
+    cursor: pointer;
+    background-color: royalblue;
+}
+
+.inactive-btn{
+    color: whitesmoke;
+    font-family: poppins;
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: grey;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .inactive-btn:hover{
+    cursor: not-allowed;
+    background-color: grey;
+  }
+
+
+  /*------------------------------------------- Add, Edit, Delete Buttons Ends ------------------------------------------------------------------------ */

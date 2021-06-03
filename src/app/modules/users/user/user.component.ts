@@ -21,6 +21,9 @@ export class UserComponent implements OnInit {
 
 
   lstsUsers: User[];
+  generalId;
+  deleteId;
+  editForm;
 
   userForm = this.formBuilder.group(
     {
@@ -30,8 +33,6 @@ export class UserComponent implements OnInit {
       usergroup: new FormControl("", Validators.required)
     }
   )
-  deleteId;
-  editForm;
 
 
   ngOnInit() {
@@ -47,6 +48,60 @@ export class UserComponent implements OnInit {
       department: '',
       usergroup: ''
     });
+  }
+
+  searchByDepartmentID(event: any) {
+    this.generalId = event.target.value;
+    if(this.generalId.length > 0){
+    this._usersapiService.getUsersByDepartmentId(this.generalId).subscribe(
+      data => {
+        this.lstsUsers=data;
+      }
+    )
+    }
+    else{
+      this._usersapiService.getUsers().subscribe(
+        data => {
+          this.lstsUsers = data;
+        }
+      )
+    }
+  }
+
+  searchByUsergroupID(event: any) {
+    this.generalId = event.target.value;
+    if(this.generalId.length > 0){
+    this._usersapiService.getUsersByUsergroupId(this.generalId).subscribe(
+      data => {
+        this.lstsUsers=data;
+      }
+    )
+    }
+    else{
+      this._usersapiService.getUsers().subscribe(
+        data => {
+          this.lstsUsers = data;
+        }
+      )
+    }
+  }
+
+  searchByUsername(event: any) {
+    this.generalId = event.target.value;
+    if(this.generalId.length > 0){
+    this._usersapiService.getUsersByUsername(this.generalId).subscribe(
+      data => {
+        this.lstsUsers = [data];
+      }
+    )
+    }
+    else{
+      this._usersapiService.getUsers().subscribe(
+        data => {
+          this.lstsUsers = data;
+        }
+      )
+    }
   }
 
   onAdd(): void {
@@ -110,7 +165,6 @@ export class UserComponent implements OnInit {
 
   showSearch(){
     document.querySelector(".searchItems").classList.toggle('hidden');
-    console.log(document.querySelector(".row"));
   }
 
   openAdd(targetModal) {

@@ -14,7 +14,7 @@
         <p>SEARCH BY DEPARTMENT ID</p> 
         </div>
         <div class="card-body">
-          <input type="text" placeholder="Department's ID">
+          <input name="department" type="text" placeholder="Department's ID" (keyup)="searchByDepartmentID($event)">
           <button><i class="fa fa-search icon-color" style="margin-right:5px;"></i></button>
         </div>
       </div>
@@ -25,7 +25,7 @@
         <p>SEARCH BY USERGROUP ID</p> 
         </div>
         <div class="card-body">
-          <input type="text" placeholder="Usergroup's ID">
+          <input type="text" placeholder="Usergroup's ID" (keyup)="searchByUsergroupID($event)">
           <button><i class="fa fa-search icon-color" style="margin-right:5px;"></i></button>
         </div>
       </div>
@@ -37,7 +37,7 @@
         <p>SEARCH BY NAME</p> 
         </div>
         <div class="card-body">
-          <input type="text" placeholder="Name">
+          <input type="text" placeholder="Name" (keyup)="searchByUsername($event)">
           <button><i class="fa fa-search icon-color" style="margin-right:5px;"></i></button>
         </div>
       </div>

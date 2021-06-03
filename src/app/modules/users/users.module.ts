@@ -6,7 +6,7 @@ import { UsergroupComponent } from './usergroup/usergroup.component';
 import { UsersoverviewComponent } from './usersoverview/usersoverview.component';
 import { UserRoutingModule } from './user-routing.module';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
@@ -21,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     ReactiveFormsModule,
     UserRoutingModule,
+    FormsModule
   ]
 })
 export class UsersModule { }
