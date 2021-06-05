@@ -83,5 +83,4 @@ export class UsersapiService {
   deleteUser(userId): Observable<any> {
     return this.httpclient.delete("http://localhost:8083/api/user/" + userId);
   }
-
 }

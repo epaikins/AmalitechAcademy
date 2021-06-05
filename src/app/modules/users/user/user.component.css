@@ -94,10 +94,6 @@ button:hover{
     height: 3rem;
   }
 
-  .btn-outline-primary{
-  margin-right: 10px;
-  margin-bottom: 15px;
-}
 
 .hidden{
   display: none;

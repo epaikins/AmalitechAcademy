@@ -1,0 +1,151 @@
+<div class="container">
+  <button (click)="openAdd(contentAdd)" class="btn btn-md btn-outline-primary button-color">
+    <i class="fas fa-cubes icon-color" style="margin-right:5px;"></i> New Batch</button>
+</div>
+
+<div class="container">
+  <div class="col-lg-12 col-md-12 col-sm-12">
+    <table class="table-scroll small-first-col">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Beginning Date</th>
+          <th>Ending Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody class="body-half-screen">
+        <tr *ngFor="let batch of lstsBatches">
+          <td>{{ batch.id }}</td>
+          <td>{{ batch.name }}</td>
+          <td>{{ batch.batchStatus }}</td>
+          <td>{{ batch.beginningDate }}</td>
+          <td>{{ batch.endingDate }}</td>
+          <td>
+            <span><button (click)="openEdit(contentEdit, batch)" type="submit" class="edit-btn"><i
+                  class="fas fa-edit"></i></button></span>
+            <span><button (click)="openDelete(contentDelete, batch)" type="submit" class="delete-btn"><i
+                  class="fas fa-trash-alt"></i></button></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<ng-template #contentAdd let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">New Batch</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="batchForm" novalidate>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <div class="input-group">
+          <input formControlName="name" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+          <label for="name">Status</label>
+          <div class="input-group">
+            <select formControlName="batchStatus">
+              <option value="" selected>Select Status</option>
+              <option value="inactivated">Inactivated</option>
+              <option value="activated">Activated</option>
+              <option value="completed">Completed</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="name">Beginning Date</label>
+          <div class="input-group">
+            <input type="date" formControlName="beginningDate" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="name">Ending Date</label>
+          <div class="input-group">
+            <input type="date" formControlName="endingDate" class="form-control">
+          </div>
+        </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="onAdd()">Add</button>
+  </div>
+</ng-template>
+
+<ng-template #contentEdit let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Update Batch</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="editForm" novalidate>
+      <div class="form-group">
+        <label for="id">Id</label>
+        <div class="input-group">
+          <input formControlName="id" class="form-control" disabled>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="name">Batch Name</label>
+        <div class="input-group">
+          <input formControlName="name" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="status">Batch Status</label>
+        <div class="input-group">
+          <select formControlName="batchStatus">
+            <option value="inactivated">Inactivated</option>
+            <option value="activated">Activated</option>
+            <option value="completed">Completed</option>
+          </select>
+          <!-- <input formControlName="batchStatus" class="form-control"> -->
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="bdate">Beginning Date</label>
+        <div class="input-group">
+          <input type="date" formControlName="beginningDate" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="edate">Ending Date</label>
+        <div class="input-group">
+          <input type="date" formControlName="endingDate" class="form-control">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="onSave()">Update</button>
+  </div>
+</ng-template>
+
+<ng-template #contentDelete let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Confirm Delete</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <h2>Are you sure you want to delete this department?</h2>
+    <div class="text-center">
+      <button (click)="onDelete()" data-dismiss="modal" class="btn btn-danger">Yes, Delete!</button>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Cancel</button>
+  </div>
+</ng-template>

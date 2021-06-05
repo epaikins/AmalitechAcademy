@@ -15,6 +15,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { UsersapiService } from "./shared/services/usersapi.service";
 import { UserRoutingModule } from './modules/users/user-routing.module';
+import { TraineeRoutingModule } from './modules/trainees/trainee-routing.module';
+import { TraineesModule } from './modules/trainees/trainees.module';
 
 
 @NgModule({
@@ -27,17 +29,19 @@ import { UserRoutingModule } from './modules/users/user-routing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    TraineeRoutingModule,
     UserRoutingModule,
     NgbModule,
     CommonModule,
     FontAwesomeModule,
+    TraineesModule,
     UsersModule,
     HttpClientModule
   ],
   providers: [UsersapiService],
   bootstrap: [AppComponent],
-  schemas:[ CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
-  }
+}
 
