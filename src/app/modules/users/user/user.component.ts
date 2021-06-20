@@ -29,6 +29,7 @@ export class UserComponent implements OnInit {
     {
       name: new FormControl("", Validators.required),
       email: new FormControl("", Validators.required),
+      password: new FormControl("password", Validators.required),
       department: new FormControl("", Validators.required),
       usergroup: new FormControl("", Validators.required)
     }
@@ -109,6 +110,7 @@ export class UserComponent implements OnInit {
       myForm = {
         name: this.userForm.value.name,
         email: this.userForm.value.email,
+        password:this.userForm.value.password,
         department: {
           id: this.userForm.value.department,
         },

@@ -70,9 +70,7 @@ export class TraineesapiService {
     }
 
     // Enroll Trainee on a Track API End Point
-    // enrollTraineeToTrack(trackId, traineeId): Observable<any> {
-    //     return this.httpclient.put(`http://localhost:8083/api/track/${trackId}/trainee/${traineeId}`,)
-    // }
-
-
+    enrollTraineeToTrack(trackId, traineeId, trainee): Observable<any> {
+        return this.httpclient.put(`http://localhost:8083/api/track/${trackId}/trainee/${traineeId}`, trainee);
+    }
 }

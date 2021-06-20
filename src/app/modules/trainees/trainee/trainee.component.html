@@ -2,7 +2,7 @@
   <button (click)="openAdd(contentAdd)" class="btn btn-md btn-outline-primary button-color">
     <i class="fas fa-user-graduate icon-color" style="margin-right:5px;"></i> New Trainee</button>
 
-  <button (click)="openAdd(contentAdd)" class="btn btn-md btn-outline-primary button-color">
+  <button (click)="openEnroll(contentEnroll)" class="btn btn-md btn-outline-primary button-color">
     <i class="fas fa-user-graduate icon-color" style="margin-right:5px;"></i> Enroll Trainee on Track</button>
 </div>
 
@@ -39,6 +39,41 @@
     </table>
   </div>
 </div>
+
+<ng-template #contentEnroll let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Enroll Trainee On Track</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="enrollForm" novalidate>
+      <div class="form-group">
+        <label for="name">Trainee</label>
+        <div class="input-group">
+          <select formControlName="trainee">
+            <option value="">Select Trainee</option>
+            <option *ngFor="let trainee of lstsTrainees" [value]="trainee.id">{{trainee.firstName}} {{trainee.lastName}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="name">Track</label>
+        <div class="input-group">
+          <select formControlName="track">
+            <option value="">Select Track</option>
+            <option *ngFor="let track of lstsTracks" [value]="track.id">{{track.name}}</option>
+          </select>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="onEnroll()">Enroll</button>
+  </div>
+</ng-template>
+
 
 <ng-template #contentAdd let-modal>
   <div class="modal-header">

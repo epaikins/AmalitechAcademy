@@ -13,6 +13,7 @@ const routes:Routes = [
     {path:'traineesoverview', component: TraineesoverviewComponent}
   ]},
   {path: "login", component:LoginComponent},
+  {path: "", component:LoginComponent},
   {path: "student", component:StudentComponent}
 ]
 

@@ -2,45 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
 </head>
 
 <body>
-    <div class="flex">
-        <div class="circle">
-            <h3 class="signText">Successfully Signed Up</h3>
-        </div>
+  <div class="flex">
+    <div class="circle">
+      <h3 class="signText">Successfully Signed Up</h3>
     </div>
+  </div>
 
-    <div class="flex">
-        <div class="inner">
-            <div class="form">
-                <h2>Login</h2>
-                <input type="radio" value="Admin" name="person">
-                <label for="" >Admin</label>
-                <input type="radio" value="Customer" name="person">
-                <label for="">Trainee</label>
-                <h5 class="hidden">please select a role</h5>
-                <br>
-                <label  class="main-text" for="">Username</label>
-                <input id="username" type="text"> <br>
-                <label  class="main-text" for="">Password</label>
-                <input id="password" type="password"><br>
-                <button type="submit" onclick="signUp()">SIGN IN</button>
-                <!-- <hr> -->
-                <p>Or Sign in with...</p>
-                <div class="socials">
-                    <div class="facebook" onclick="facebook()"><i class="fab fa-facebook"></i></div>
-                    <div class="twitter" onclick="twitter()"><i class="fab fa-twitter"></i></div>
-                    <div class="google" onclick="google()"><i class="fab fa-google"></i></div>
-                    <div class="apple" onclick="apple()"><i class="fab fa-apple"></i></div>
-                </div>
-            </div>
+  <div class="flex">
+    <div class="inner">
+      <form #loginForm="ngForm" (ngSubmit)="loginUser()">
+        <div class="form">
+          <h2>Login</h2>
+          <br>
+          <label class="main-text" for="">Email</label>
+          <input id="username" type="text" name="email" [(ngModel)] = "user.email"> <br>
+          <label class="main-text" for="">Password</label>
+          <input id="password" type="password" name="password" [(ngModel)] = "user.password"><br>
+          <button type="submit">SIGN IN</button>
+          <!-- <hr> -->
+          <p>Or Sign in with...</p>
+          <div class="socials">
+            <div class="facebook" onclick="facebook()"><i class="fab fa-facebook"></i></div>
+            <div class="twitter" onclick="twitter()"><i class="fab fa-twitter"></i></div>
+            <div class="google" onclick="google()"><i class="fab fa-google"></i></div>
+            <div class="apple" onclick="apple()"><i class="fab fa-apple"></i></div>
+          </div>
         </div>
+      </form>
     </div>
+  </div>
 
 </body>
 

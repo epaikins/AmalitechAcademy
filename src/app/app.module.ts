@@ -17,6 +17,7 @@ import { UsersapiService } from "./shared/services/usersapi.service";
 import { UserRoutingModule } from './modules/users/user-routing.module';
 import { TraineeRoutingModule } from './modules/trainees/trainee-routing.module';
 import { TraineesModule } from './modules/trainees/trainees.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { TraineesModule } from './modules/trainees/trainees.module';
     AppRoutingModule,
     TraineeRoutingModule,
     UserRoutingModule,
+    FormsModule,
     NgbModule,
     CommonModule,
     FontAwesomeModule,

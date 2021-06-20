@@ -4,6 +4,7 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Trainee } from '../../../shared/models/trainee.model';
 import { Batch } from 'src/app/shared/models/batch.model';
+import { Track } from 'src/app/shared/models/track.model';
 
 @Component({
   selector: 'app-trainee',
@@ -17,7 +18,7 @@ export class TraineeComponent implements OnInit {
     private formBuilder: FormBuilder,
     private modalService: NgbModal) { }
 
-
+  lstsTracks:Track[];
   lstsTrainees: Trainee[];
   lstsBatches: Batch[];
 
@@ -28,6 +29,13 @@ export class TraineeComponent implements OnInit {
       dob: new FormControl("", Validators.required),
       batch: new FormControl("", Validators.required),
       status: new FormControl("", Validators.required),
+    }
+  )
+
+  enrollForm = this.formBuilder.group(
+    {
+      track: new FormControl("", Validators.required),
+      trainee: new FormControl("", Validators.required),
     }
   )
 
@@ -45,6 +53,11 @@ export class TraineeComponent implements OnInit {
         this.lstsBatches = data;
       }
     )
+    this._traineesapiService.getTracks().subscribe(
+      data => {
+        this.lstsTracks = data;
+      }
+    )
 
     this.editForm = this.formBuilder.group({
       id:'',
@@ -54,6 +67,24 @@ export class TraineeComponent implements OnInit {
       batch:'',
       status:''
     });
+  }
+
+  openEnroll(targetModal) {
+    this.modalService.open(targetModal, {
+      size: 'lg'
+    });
+  }
+
+  onEnroll(): void {
+    let trainee:Trainee;
+    this._traineesapiService.enrollTraineeToTrack(this.enrollForm.value.track,this.enrollForm.value.trainee,trainee).subscribe(
+      data => {
+        this.ngOnInit();
+        this.modalService.dismissAll();
+      }
+    )
+    this.enrollForm.reset();
+  
   }
 
   openAdd(targetModal) {

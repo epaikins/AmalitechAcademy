@@ -72,8 +72,11 @@ export class UsersapiService {
   }
 
   postUser(user: User): Observable<any> {
-    console.log(user);
     return this.httpclient.post("http://localhost:8083/api/user", user)
+  }
+
+  loginUser(user: User): Observable<any> {
+    return this.httpclient.post("http://localhost:8083/api/user/login", user)
   }
 
   updateUser(id, user: User): Observable<any> {
@@ -83,4 +86,8 @@ export class UsersapiService {
   deleteUser(userId): Observable<any> {
     return this.httpclient.delete("http://localhost:8083/api/user/" + userId);
   }
+
+
+
+
 }
